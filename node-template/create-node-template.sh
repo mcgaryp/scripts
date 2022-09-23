@@ -25,6 +25,8 @@ function projectFolder() {
     bsConfigFile
     # Create package.json and populate
     packageFile
+    # Create README.md
+    readmeFile
 }
 
 function databaseFolder() {
@@ -249,6 +251,10 @@ function packageFile() {
 }'
 }
 
+function readmeFile() {
+    makeFile 'README.md' 
+}
+
 function createProject() {
     # Create project folder
     makeDir $1
@@ -276,7 +282,7 @@ function main() {
     fi
 
     # Run npm install
-    # npm install
+    npm install
 }
 
 main $1 $2
